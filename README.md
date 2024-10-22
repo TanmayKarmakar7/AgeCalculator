@@ -5,10 +5,10 @@ The Age Calculator is a simple web application that allows users to calculate th
 The application provides precise information about the age in terms of years, months, and days. It is built using HTML, CSS, and JavaScript.
 
 Features : 
-    - User-friendly interface for entering the birthdate.
-    - Calculates the exact age in years, months, and days.
-    - Validates user input to ensure correct date format.
-    - Real-time calculation as the user inputs the data.
+          - User-friendly interface for entering the birthdate.
+          - Calculates the exact age in years, months, and days.
+          - Validates user input to ensure correct date format.
+          - Real-time calculation as the user inputs the data.
 
 
 
