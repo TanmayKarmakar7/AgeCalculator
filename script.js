@@ -13,6 +13,11 @@ function calculateAge(){
         return;
     }
 
+    if (userDOB > today) {
+        alert("Error: Birthdate cannot be in the future!");
+        return;
+    }
+
     const DOBDate = userDOB.getDate();
     const DOBMonth = userDOB.getMonth() + 1;
     const DOBYear = userDOB.getFullYear();
