@@ -51,6 +51,27 @@ function calculateAge(){
     }
 
     displayAge(years, months, days);
+
+// Calculate next birthday
+let nextBirthdayYear = (todayMonth > DOBMonth || (todayMonth === DOBMonth && todayDate > DOBDate)) ? todayYear + 1 : todayYear;
+let nextBirthday = new Date(nextBirthdayYear, DOBMonth - 1, DOBDate);
+
+let nextMonths, nextDays;
+
+if (nextBirthday > today) {
+    nextMonths = DOBMonth - todayMonth;
+    if (nextMonths < 0) nextMonths += 12;
+
+    nextDays = DOBDate - todayDate;
+    if (nextDays < 0) {
+        nextMonths--;
+        if (nextMonths < 0) nextMonths += 12;
+        nextDays = getDaysInMonths(todayYear, todayMonth) + nextDays;
+    }
+}
+
+document.querySelector("#next-birthday-months").innerHTML = nextMonths < 10 ? `0${nextMonths}` : nextMonths;
+document.querySelector("#next-birthday-days").innerHTML = nextDays < 10 ? `0${nextDays}` : nextDays;
     
 };
 
